@@ -1,0 +1,14 @@
+<label>Informações Pessoais</label>
+<br><br>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <div>
+    <label for="nome">Nome: </label>
+    <input id="nome" type="text" formControlName="nome" (blur)="emitirValor()" value="data.nome">
+  </div>
+  <br>
+  <div>
+    <label for="sobrenome">Sobrenome: </label>
+    <input id="sobrenome" type="text" formControlName="sobrenome" (blur)="emitirValor()">
+  </div>
+</form>
+<button (click)="mostrarDataInput()" >Mostrar Input</button>

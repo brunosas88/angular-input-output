@@ -1,0 +1,20 @@
+<app-filho [data]="dadosEnviarFilho" (emissor)="pegaValorForm($event)" ></app-filho>
+<br />
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<br /><br />
+<label>Endereço</label>
+<br /><br />
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <div>
+    <label for="rua">Rua: </label>
+    <input id="rua" type="text" formControlName="rua" />
+  </div>
+  <br />
+  <div>
+    <label for="bairro">Bairro: </label>
+    <input id="bairro" type="text" formControlName="bairro" />
+  </div>
+</form>
+
+<button (click)="enviarDados()" >Enviar</button>
+<button (click)="mostrarValor()" >Mostrar</button>
